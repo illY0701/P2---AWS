@@ -4,8 +4,6 @@
 
 Este projeto implementa uma arquitetura completa na AWS utilizando Terraform, desenvolvido como parte da avaliação da disciplina de Cloud Computing. A infraestrutura inclui todos os principais serviços AWS: EC2, RDS, S3, ECS, Lambda e API Gateway, com monitoramento integrado via CloudWatch e Grafana.
 
-**Status**: ✅ **PROJETO COMPLETO - NOTA 10/10**
-
 ---
 
 ## 🏗️ Arquitetura
@@ -269,16 +267,10 @@ O projeto implementa várias camadas de segurança:
 
 ## 👥 Equipe
 
-[Adicione aqui os nomes dos membros do grupo e RAs]
+Anna Isabelle 
+César Rodrigues
+Evily Maria
 
 ---
 
-## 📝 Licença
 
-Este projeto foi desenvolvido para fins acadêmicos.
-
----
-
-## 📞 Contato
-
-Para dúvidas ou sugestões sobre o projeto, entre em contato através do repositório ou das issues do GitHub.
