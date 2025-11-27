@@ -1,0 +1,40 @@
+# ============================================================================
+# Grafana Datasources Configuration
+# Configuração de data sources para CloudWatch
+# ============================================================================
+
+apiVersion: 1
+
+datasources:
+  - name: CloudWatch
+    type: cloudwatch
+    access: proxy
+    jsonData:
+      authType: keys
+      defaultRegion: us-east-1
+      # Substitua pelos valores corretos após deploy
+      # ou configure via variáveis de ambiente
+    secureJsonData:
+      accessKey: ${AWS_ACCESS_KEY_ID}
+      secretKey: ${AWS_SECRET_ACCESS_KEY}
+    isDefault: true
+    editable: true
+
+  - name: CloudWatch Logs
+    type: cloudwatch
+    access: proxy
+    jsonData:
+      authType: keys
+      defaultRegion: us-east-1
+      logGroups:
+        - /aws/ec2
+        - /aws/lambda
+        - /ecs
+        - /aws/api-gateway
+    secureJsonData:
+      accessKey: ${AWS_ACCESS_KEY_ID}
+      secretKey: ${AWS_SECRET_ACCESS_KEY}
+    editable: true
+
+
+

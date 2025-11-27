@@ -1,0 +1,71 @@
+# Terraform
+.terraform/
+.terraform.old.*/
+*.tfstate
+*.tfstate.backup
+*.tfstate.*
+.terraform.lock.hcl
+tfplan
+terraform.tfvars
+terraform/.terraform/
+terraform/.terraform.old.*/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
+terraform/tfplan
+terraform/terraform.tfvars
+
+# Providers Terraform (arquivos grandes .exe)
+*.exe
+terraform-provider-*
+
+# Credenciais e Segredos
+*.pem
+*.key
+.env
+credentials
+.aws/
+*.secret
+
+# Logs
+*.log
+TESTE_FINAL.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.pyc
+
+# Windows
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporários
+*.tmp
+*.temp
+~$*
+
+# Scripts de configuração local
+CONFIGURAR_*.ps1
+ADICIONAR_*.ps1
+RODAR_TUDO.ps1
+iniciar.ps1
+VERIFICAR_TERRAFORM.ps1
+
+# Arquivos de comandos temporários
+*.txt
+!requirements.txt
+!README.txt
+
+# Arquivos de documentação temporários
+UPLOAD_GITHUB.md
+LEIA_ESTE_ARQUIVO.md

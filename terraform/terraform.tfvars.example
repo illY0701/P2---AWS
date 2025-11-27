@@ -1,0 +1,50 @@
+# ============================================================================
+# Exemplo de arquivo de variáveis Terraform
+# Copie este arquivo para terraform.tfvars e edite com suas configurações
+# ============================================================================
+
+# Configurações Gerais
+aws_region   = "us-east-1"
+project_name = "cloud-computing-av2"
+environment  = "dev"
+owner        = "Seu Nome Aqui"
+
+# VPC
+vpc_cidr           = "10.0.0.0/16"
+availability_zones = ["us-east-1a", "us-east-1b"]
+
+# EC2
+ec2_instance_type = "t3.micro"
+ec2_key_name      = "" # Opcional: adicione o nome do seu key pair se quiser acesso SSH
+
+# RDS
+db_instance_class = "db.t3.micro"
+db_name           = "appdb"
+db_username       = "admin"
+db_password       = "MudeSenhaSegura123!" # ⚠️ MUDE ESTA SENHA!
+
+# ECS
+ecs_task_cpu       = "256"
+ecs_task_memory    = "512"
+ecs_desired_count  = 2
+
+# Lambda
+lambda_runtime = "python3.11"
+lambda_timeout = 30
+lambda_memory  = 256
+
+# S3
+s3_bucket_prefix = "cloud-av2"
+
+# Monitoramento
+enable_detailed_monitoring = true
+cloudwatch_retention_days  = 7
+
+# Tags Adicionais (opcional)
+additional_tags = {
+  CostCenter = "Education"
+  Course     = "Cloud Computing"
+}
+
+
+

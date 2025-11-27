@@ -1,0 +1,38 @@
+# ============================================================================
+# Grafana Configuration
+# docker-compose.yml para executar Grafana localmente
+# ============================================================================
+
+version: '3.8'
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-cloud-monitoring
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=us-east-1
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
+      - ./dashboards:/etc/grafana/provisioning/dashboards
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+volumes:
+  grafana-storage:
+    driver: local
+
+networks:
+  monitoring:
+    driver: bridge
+
+
+
