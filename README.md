@@ -147,12 +147,7 @@ O projeto implementa várias camadas de segurança:
 
 ## Equipe
 
-[Adicione aqui os nomes dos membros do grupo e RAs]
+Anna Isabelle
+César Rodrigues
+Evily Maria
 
-## Licença
-
-Este projeto foi desenvolvido para fins acadêmicos.
-
-## Contato
-
-Para dúvidas ou sugestões sobre o projeto, entre em contato através do repositório ou das issues do GitHub.
